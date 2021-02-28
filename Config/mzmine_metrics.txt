@@ -1,0 +1,13 @@
+mz|mass to charge ratio|-1|Mass to Charge Ratio (mz)|Y|Y
+rt|retention time|3|Retention Time|Y|Y
+height|spectra peak height|-1|Height|Y|Y
+area|spectra peak area|-1|Area|Y|Y
+fwhm|full width half maximum|6|Full Width Half Maximum|Y|Y
+tf|tailing factor|7|Tailing|Y|Y
+af|asymmetry factor|8|Asymmetry|Y|Y
+mz_min|mass to charge minimum|-1|mz Minimum|Y|Y
+mz_max|mass to charge maximum|-1|mz Maximum|Y|Y
+mass_error_ppm|relative error in parts per million|1|Mass Error (ppm)|Y|Y
+mass_error_dalton|dalton measure of mass error|2|Mass Error (mDa)|Y|Y
+area_normalised|area normalised by median|4|Area (normalised)|Y|Y
+height_normalised|height normalised by median|5|Height (normalised)|Y|Y

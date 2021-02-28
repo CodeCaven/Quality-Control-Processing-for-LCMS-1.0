@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batch>
+    <batchstep method="net.sf.mzmine.modules.rawdatamethods.rawdataimport.RawDataImportModule">
+        <parameter name="Raw data file names">
+            <file>POSINPUTFILE</file>
+        </parameter>
+    </batchstep>
+    <batchstep method="net.sf.mzmine.modules.rawdatamethods.peakpicking.targetedpeakdetection.TargetedPeakDetectionModule">
+        <parameter name="Raw data files" type="BATCH_LAST_FILES"/>
+        <parameter name="Name suffix">detectedPeak</parameter>
+        <parameter name="Peak list file">POSDATABASEFILE</parameter>
+        <parameter name="Field separator">|</parameter>
+        <parameter name="Ignore first line">true</parameter>
+        <parameter name="Intensity tolerance">0.5</parameter>
+        <parameter name="Noise level">10000.0</parameter>
+        <parameter name="m/z tolerance">
+            <absolutetolerance>0.005</absolutetolerance>
+            <ppmtolerance>2.0</ppmtolerance>
+        </parameter>
+        <parameter name="Retention time tolerance" type="absolute">5.0</parameter>
+    </batchstep>
+    <batchstep method="net.sf.mzmine.modules.peaklistmethods.io.csvexport.CSVExportModule">
+        <parameter name="Peak lists" type="BATCH_LAST_PEAKLISTS"/>
+        <parameter name="Filename">DIRECTORY\posoutput.csv</parameter>
+        <parameter name="Field separator">|</parameter>
+        <parameter name="Export common elements">
+            <item>Export row identity (main ID)</item>
+        </parameter>
+        <parameter name="Export data file elements">
+            <item>Peak m/z</item>
+            <item>Peak RT</item>
+            <item>Peak height</item>
+            <item>Peak area</item>
+            <item>Peak FWHM</item>
+            <item>Peak tailing factor</item>
+            <item>Peak asymmetry factor</item>
+            <item>Peak m/z min</item>
+            <item>Peak m/z max</item>
+        </parameter>
+        <parameter name="Export all IDs for peak">false</parameter>
+        <parameter name="Export quantitation results and other information">false</parameter>
+        <parameter name="Identification separator">#</parameter>
+    </batchstep>
+	    <batchstep method="net.sf.mzmine.modules.rawdatamethods.rawdataimport.RawDataImportModule">
+        <parameter name="Raw data file names">
+            <file>NEGINPUTFILE</file>
+        </parameter>
+    </batchstep>
+    <batchstep method="net.sf.mzmine.modules.rawdatamethods.peakpicking.targetedpeakdetection.TargetedPeakDetectionModule">
+        <parameter name="Raw data files" type="BATCH_LAST_FILES"/>
+        <parameter name="Name suffix">detectedPeak</parameter>
+        <parameter name="Peak list file">NEGDATABASEFILE</parameter>
+        <parameter name="Field separator">|</parameter>
+        <parameter name="Ignore first line">true</parameter>
+        <parameter name="Intensity tolerance">0.5</parameter>
+        <parameter name="Noise level">10000.0</parameter>
+        <parameter name="m/z tolerance">
+            <absolutetolerance>0.005</absolutetolerance>
+            <ppmtolerance>2.0</ppmtolerance>
+        </parameter>
+        <parameter name="Retention time tolerance" type="absolute">5.0</parameter>
+    </batchstep>
+    <batchstep method="net.sf.mzmine.modules.peaklistmethods.io.csvexport.CSVExportModule">
+        <parameter name="Peak lists" type="BATCH_LAST_PEAKLISTS"/>
+        <parameter name="Filename">DIRECTORY\negoutput.csv</parameter>
+        <parameter name="Field separator">|</parameter>
+        <parameter name="Export common elements">
+            <item>Export row identity (main ID)</item>
+        </parameter>
+        <parameter name="Export data file elements">
+            <item>Peak m/z</item>
+            <item>Peak RT</item>
+            <item>Peak height</item>
+            <item>Peak area</item>
+            <item>Peak FWHM</item>
+            <item>Peak tailing factor</item>
+            <item>Peak asymmetry factor</item>
+            <item>Peak m/z min</item>
+            <item>Peak m/z max</item>
+        </parameter>
+        <parameter name="Export all IDs for peak">false</parameter>
+        <parameter name="Export quantitation results and other information">false</parameter>
+        <parameter name="Identification separator">#</parameter>
+    </batchstep>
+    <batchstep method="net.sf.mzmine.modules.projectmethods.projectsave.ProjectSaveModule">
+        <parameter name="Project file">SAMPLEBATCHNAME</parameter>
+    </batchstep>
+</batch>

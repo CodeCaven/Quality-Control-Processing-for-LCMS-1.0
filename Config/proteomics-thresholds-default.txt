@@ -1,0 +1,14 @@
+metric|trigger|threshold_low|threshold_high
+mass_error_ppm|3|-4|4
+mass_error_dalton|||
+rt|3|10|10
+area_normalised|3|-2||
+height_normalised|||
+fwhm|3||15
+tf|3||3
+af|3||3
+MS/MS Spectra|1|25|10
+Target PSMs|1|25|
+Unique Target Peptides|1|25|
+Target Protein Groups|1|25|
+Precursor Mass Error|1|-4|4

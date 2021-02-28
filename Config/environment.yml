@@ -1,0 +1,11 @@
+name: MPMFQC
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - numpy=1.17.0
+  - pandas=0.25.0
+  - PyMySQL=0.9.3
+  - comtypes=1.1.7
+  - pymsfilereader=1.0.1
+

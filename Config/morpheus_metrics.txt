@@ -1,0 +1,5 @@
+MS/MS Spectra|spectrum from ms2 scans|1|MS/MS Spectra (Morpheus)|N|Y
+Target PSMs|peptide spectrum matches|2|PSM (Morpheus)|N|Y
+Unique Target Peptides|number of unique peptides identified|3|Unique Peptides (Morpheus)|N|Y
+Target Protein Groups|number of protein groups identified|4|Protein Groups (Morpheus)|N|Y
+Precursor Mass Error|average precursor mass error in ppm|5|Precursor Mass Error ppm (Morpheus)|N|Y

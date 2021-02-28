@@ -1,0 +1,9 @@
+metric|trigger|threshold_low|threshold_high
+mass_error_ppm|3|-3|3
+mass_error_dalton|||
+rt|3|10|10
+area_normalised|3|10|10|
+height_normalised|||
+fwhm|||
+tf|||
+af|||

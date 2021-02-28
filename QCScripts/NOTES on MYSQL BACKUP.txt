@@ -1,0 +1,1 @@
+need to replace 'utf8mb4_general_ci' with 'utf8mb4_general_ci'
